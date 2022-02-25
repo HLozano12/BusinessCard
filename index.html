@@ -1,14 +1,66 @@
+<!DOCTYPE html>
 <html>
   <head>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
   </head>
   <body>
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      
+      <!-- assets to be used in scene-->
+      <a-assets>
+        <img id="linkedInIcon" src="https://raw.githubusercontent.com/HLozano12/BusinessCard/main/Images/LI-In-Bug.png"/>
+        <img id="GitHubIcon" src="https://raw.githubusercontent.com/HLozano12/BusinessCard/main/Images/GitHub-Mark-64px.png"/>
+        <img id="TwitterIcon" src="https://raw.githubusercontent.com/HLozano12/BusinessCard/main/Images/Twitter%20logo%20-%20blue.png"/>
+        <img id="IGIcon" src="https://raw.githubusercontent.com/HLozano12/BusinessCard/main/Images/IG.png"/>
+      </a-assets>
+      
+      
+      <!-- World sky images-->
       <a-sky color="#ECECEC"></a-sky>
+      
+      <!-- Cursor toggle for selection and movement-->
+      <a-camera>
+        <a-cursor id="cursor" fuse="false" color="#FF9D00" position="0 0 -1"></a-cursor>
+      </a-camera>
+      
+      <a-entity
+        id="GitHubLink"
+        geometry="primitive: plane"
+        position="0 3 -2"
+        rotation="0 0 0"
+        material="src: #gitHubIcon; alphaTest: 0.5"
+        onclick="location.href='https://github.com/HLozano12'">
+      </a-entity>
+      
+      <a-entity
+        id="LinkedInLink"
+        geometry="primitive: plane"
+        position="0 1 -2"
+        rotation="0 0 0"
+        material="src: #linkedInIcon; alphaTest: 0.5"
+        onclick="location.href='https://www.linkedin.com/in/hector-lozano-profile/'">
+      </a-entity>
+      
+      <a-entity
+        id="TwiiterLink"
+        geometry="primitive: plane"
+        position="-2 1 -2"
+        rotation="0 0 0"
+        material="src: #TwitterIcon; alphaTest: 0.5"
+        onclick="location.href='https://twitter.com/I_Am_Lozano'">
+      </a-entity>
+      
+      <a-entity
+        id="InstagramLink"
+        geometry="primitive: plane"
+        position="2 1 -2"
+        rotation="0 0 0"
+        material="src: #IGIcon; alphaTest: 0.5"
+        onclick="location.href='https://www.instagram.com/code_papa/'">
+      </a-entity>
+      
+      
+    
     </a-scene>
   </body>
 </html>
